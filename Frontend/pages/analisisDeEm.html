@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link href="../css/global.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-border px-6 md:px-10 py-3 bg-background-light dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3 text-primary">
+                    <div class="size-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                        ApplySmart AI</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                        href="Dashboard.html">Tablero</a>
+                    <a class="text-slate-900 dark:text-white text-sm font-medium transition-colors"
+                        href="aplicacion.html">Solicitudes</a>
+                    <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                        href="#">Configuración</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+                    <div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-slate-border">
+                        <div class="text-slate-400 flex bg-slate-custom items-center justify-center pl-4 rounded-l-xl"
+                            data-icon="search">
+                            <span class="material-symbols-outlined text-lg">search</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 border-none bg-slate-custom focus:ring-0 text-slate-100 placeholder:text-slate-500 text-sm font-normal rounded-r-xl"
+                            placeholder="Buscar aplicaciones..." value="" />
+                    </div>
+                </label>
+                <div class="bg-primary/20 p-0.5 rounded-full border border-primary/30">
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8"
+                        data-alt="User profile avatar with abstract pattern"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDT8G4REDasit3gPXKHrtGjGJSJjZJhjG4O7kQX4CuluySA6Ux_yf_ZTjAhffDWg7HGsQMK2SfSq5AzcQ0lyceqZu3jhZv8WOWRAvBIB2ZHQCsCtt-LA3MsH-uWNr9BxD86GKQfYvTHuqyYRlyVQcgoxUHEGMvxtYNS9pUu6UVNq5zlZtvXo4JaqdVdna69obOyqBD7QQZ08a1urUL3LxH8k2SGRUbH3XCE8eks05F4Y6a2GWwZq73jfxvl2VylakI5aQzCoYTb7Syl");'>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 max-w-7xl mx-auto w-full px-4 md:px-10 py-8">
+            <!-- Breadcrumbs & Title -->
+            <div class="mb-8">
+                <div class="flex items-center gap-2 text-sm text-slate-500 mb-2">
+                    <span>Mis Solicitudes</span>
+                    <span class="material-symbols-outlined text-xs">chevron_right</span>
+                    <span class="text-primary font-medium">Análisis de TechGlobal Inc.</span>
+                </div>
+                <h1 class="text-4xl font-black text-slate-900 dark:text-white tracking-tight">Análisis de Empresa</h1>
+                <p class="text-slate-500 mt-2 text-lg">Visión estratégica profunda y alineación de valores para tu
+                    candidatura.</p>
+            </div>
+            <!-- Tabs -->
+            <div class="border-b border-slate-border mb-8">
+                <div class="flex gap-8 overflow-x-auto custom-scrollbar">
+                    <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 pb-4 hover:text-slate-300 transition-colors whitespace-nowrap"
+                        href="estrategiaRes.html">
+                        <p class="text-sm font-bold tracking-wide">RESUMEN DE APLICACIÓN</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-4 whitespace-nowrap"
+                        href="analisisDeEm.html">
+                        <p class="text-sm font-bold tracking-wide">ANÁLISIS ESTRATÉGICO</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 pb-4 hover:text-slate-300 transition-colors whitespace-nowrap"
+                        href="estrategia.html">
+                        <p class="text-sm font-bold tracking-wide">PREPARACIÓN DE ENTREVISTA</p>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Main Content Area -->
+                <div class="lg:col-span-8 space-y-10">
+                    <!-- Executive Summary Section -->
+                    <section>
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="material-symbols-outlined text-primary">analytics</span>
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Resumen Ejecutivo</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-6 rounded-xl bg-slate-custom/50 border border-slate-border">
+                                <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-3">Modelo de
+                                    Negocio</h3>
+                                <p class="text-slate-300 leading-relaxed">TechGlobal opera bajo un modelo SaaS B2B
+                                    centrado en infraestructura cloud elástica. Su flujo de ingresos principal proviene
+                                    de suscripciones anuales con un enfoque fuerte en escalabilidad horizontal.</p>
+                            </div>
+                            <div class="p-6 rounded-xl bg-slate-custom/50 border border-slate-border">
+                                <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-3">Contexto del
+                                    Sector</h3>
+                                <p class="text-slate-300 leading-relaxed">Lideran el cuadrante de innovación en Edge
+                                    Computing. El sector enfrenta una consolidación agresiva, donde TechGlobal destaca
+                                    por su arquitectura "zero-trust" integrada.</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-6 rounded-xl bg-primary/5 border border-primary/20">
+                            <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-2">Prioridades
+                                Estratégicas 2024</h3>
+                            <ul class="space-y-2 text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    <span>Expansión en el mercado LATAM con enfoque en banca digital.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                    <span>Integración de IA Generativa para optimización de despliegues.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- Philosophy & Values Section -->
+                    <section>
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="material-symbols-outlined text-primary">verified_user</span>
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Filosofía y Valores</h2>
+                        </div>
+                        <div
+                            class="mb-8 p-8 rounded-xl bg-gradient-to-br from-primary/20 to-transparent border border-slate-border relative overflow-hidden">
+                            <div class="relative z-10">
+                                <span class="text-xs font-bold text-primary tracking-[0.2em] uppercase">Misión
+                                    Corporativa</span>
+                                <p class="mt-4 text-xl md:text-2xl font-medium text-white italic leading-relaxed">
+                                    "Democratizar el acceso a la computación de alto rendimiento para acelerar el
+                                    progreso humano."
+                                </p>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4 opacity-10">
+                                <span class="material-symbols-outlined text-[120px]">format_quote</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Value Card 1 -->
+                            <div
+                                class="p-6 rounded-xl bg-slate-custom border border-slate-border hover:border-primary/50 transition-all group">
+                                <div
+                                    class="size-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">groups</span>
+                                </div>
+                                <h3 class="font-bold text-lg text-white mb-2">Obsesión por el Cliente</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">No solo escuchamos, anticipamos
+                                    necesidades. Cada línea de código debe resolver un problema real del usuario final.
+                                </p>
+                            </div>
+                            <!-- Value Card 2 -->
+                            <div
+                                class="p-6 rounded-xl bg-slate-custom border border-slate-border hover:border-primary/50 transition-all group">
+                                <div
+                                    class="size-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">bolt</span>
+                                </div>
+                                <h3 class="font-bold text-lg text-white mb-2">Moverse Rápido</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">Preferimos la velocidad con
+                                    aprendizaje sobre la perfección lenta. Valoramos la agilidad en la toma de
+                                    decisiones.</p>
+                            </div>
+                            <!-- Value Card 3 -->
+                            <div
+                                class="p-6 rounded-xl bg-slate-custom border border-slate-border hover:border-primary/50 transition-all group">
+                                <div
+                                    class="size-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">shield_person</span>
+                                </div>
+                                <h3 class="font-bold text-lg text-white mb-2">Sentido de Propiedad</h3>
+                                <p class="text-sm text-slate-400 leading-relaxed">Ownership total. Actuamos en nombre de
+                                    toda la empresa, más allá de nuestro propio equipo.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Sidebar -->
+                <div class="lg:col-span-4">
+                    <div class="sticky top-24 space-y-6">
+                        <div class="p-6 rounded-xl bg-slate-custom border border-slate-border">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="material-symbols-outlined text-primary">psychology</span>
+                                <h2 class="text-lg font-bold text-white">Guía de Candidato</h2>
+                            </div>
+                            <!-- Persona Section -->
+                            <div class="mb-6">
+                                <div class="flex items-center gap-2 mb-3 text-slate-300">
+                                    <span class="material-symbols-outlined text-sm">person_search</span>
+                                    <span class="text-xs font-bold uppercase tracking-wider">Persona Deseada</span>
+                                </div>
+                                <div class="p-4 rounded-lg bg-background-dark border border-slate-border">
+                                    <p class="text-sm text-slate-300">Buscan un "Pragmático Visionario": alguien que
+                                        entienda la arquitectura compleja pero que priorice la entrega de valor
+                                        inmediata.</p>
+                                </div>
+                            </div>
+                            <!-- Positioning Section -->
+                            <div class="mb-6">
+                                <div class="flex items-center gap-2 mb-3 text-slate-300">
+                                    <span class="material-symbols-outlined text-sm">ads_click</span>
+                                    <span class="text-xs font-bold uppercase tracking-wider">Posicionamiento</span>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="text-sm text-slate-400 flex gap-2">
+                                        <span class="text-primary">•</span>
+                                        Enfatiza tu experiencia en sistemas distribuidos.
+                                    </li>
+                                    <li class="text-sm text-slate-400 flex gap-2">
+                                        <span class="text-primary">•</span>
+                                        Menciona casos donde tomaste decisiones bajo ambigüedad.
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Errors Section -->
+                            <div class="mb-8">
+                                <div class="flex items-center gap-2 mb-3 text-slate-300">
+                                    <span class="material-symbols-outlined text-sm">warning</span>
+                                    <span class="text-xs font-bold uppercase tracking-wider">Errores Comunes</span>
+                                </div>
+                                <div class="p-4 rounded-lg bg-red-500/5 border border-red-500/20">
+                                    <p class="text-xs text-red-400 leading-relaxed">No mostrar interés por el negocio.
+                                        TechGlobal descarta ingenieros que "solo quieren programar" sin entender el
+                                        impacto en el cliente.</p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                                <span>Ver Guía Completa</span>
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                        </div>
+                        <!-- Additional Context Card -->
+                        <div
+                            class="p-6 rounded-xl bg-gradient-to-tr from-slate-custom to-slate-custom/50 border border-slate-border">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-primary">lightbulb</span>
+                                <h3 class="text-sm font-bold text-white">Insight Pro</h3>
+                            </div>
+                            <p class="text-sm text-slate-400">
+                                Recientemente han migrado sus microservicios a Rust. Mencionar tu curiosidad o
+                                experiencia en lenguajes de bajo nivel te dará puntos extra.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="border-t border-slate-border mt-12 py-8 px-10">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-slate-500 text-sm">
+                    © 2024 ApplySmart AI. Todos los derechos reservados.
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-slate-500 hover:text-white text-sm transition-colors" href="#">Privacidad</a>
+                    <a class="text-slate-500 hover:text-white text-sm transition-colors" href="#">Términos</a>
+                    <a class="text-slate-500 hover:text-white text-sm transition-colors" href="#">Ayuda</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

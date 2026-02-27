@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Análisis de Brecha - ApplySmart AI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link href="../css/global.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="layout-container flex flex-col min-h-screen">
+        <!-- Top Navigation Bar -->
+        <header
+            class="border-b border-slate-200 dark:border-primary/20 px-6 lg:px-20 py-4 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary p-1.5 rounded-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
+                                fill="currentColor"></path>
+                            <path clip-rule="evenodd"
+                                d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">ApplySmart AI</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a class="text-slate-600 dark:text-slate-400 hover:text-primary font-medium text-sm transition-colors"
+                        href="estrategiaRes.html">Resumen</a>
+                    <a class="text-primary border-b-2 border-primary pb-1 font-semibold text-sm"
+                        href="estrategiaAnali.html">Análisis de
+                        Brechas</a>
+                    <a class="text-slate-600 dark:text-slate-400 hover:text-primary font-medium text-sm transition-colors"
+                        href="estrategia.html">Plan de Preparación</a>
+                    <a class="text-slate-600 dark:text-slate-400 hover:text-primary font-medium text-sm transition-colors"
+                        href="estartegiaRecu.html">Recursos</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-xl transition-all">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div class="h-10 w-10 rounded-full border-2 border-primary/30 overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="User profile avatar showing a professional man"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA28SscPwEmzL0MFqYZH7YOXlixGHL-XGJKiD013ajT-X9RD_aUVawshAfd9INgZVpGlkBgelFKd7FG9QvcKYkRglMyWEb6VaF3OJ15cKNwBNmhyaxGsq55AssOmLKgvA1VpqY74gg4fdqFT62IEAEhMyrcn2y1bIWwdltmoN929xEn67Zx1kmE57UVlRHLydqShnImKll2Yufer1XfiFODtaZFCKj4DDDCYzE9-ZdBZ8yvlyK_y5h3kzbNHeTcC_0bLJYmNkK0OIju" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="flex-1 max-w-7xl mx-auto w-full px-6 py-10">
+            <!-- Hero Header -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+                <div>
+                    <h1 class="text-4xl font-extrabold tracking-tight mb-2">Análisis de Brecha</h1>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-2xl">
+                        Comparativa detallada entre tu CV actual y los requisitos de la vacante: <span
+                            class="text-primary font-semibold">Senior DevOps Engineer @ CloudTech Solutions</span>.
+                    </p>
+                </div>
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                    <span class="material-symbols-outlined text-[20px]">upload_file</span>
+                    Actualizar CV
+                </button>
+            </div>
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Match Rate Card -->
+                <div
+                    class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-primary/10 p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-bold text-lg">Match Rate General</h3>
+                            <span
+                                class="bg-green-100 dark:bg-green-500/20 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">+17%
+                                vs Promedio</span>
+                        </div>
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <span class="text-6xl font-black text-primary">82%</span>
+                            <span class="text-slate-400 font-medium">/ 100%</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="relative h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 82%;"></div>
+                        </div>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Tu perfil supera el umbral mínimo (75%) para esta posición. Estás entre el top 5% de
+                            candidatos.
+                        </p>
+                    </div>
+                </div>
+                <!-- Score Comparison Chart -->
+                <div
+                    class="lg:col-span-2 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-primary/10 p-8 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-8">Comparativa por Categoría</h3>
+                    <div class="flex items-end justify-between gap-4 h-[160px] px-4">
+                        <div class="flex-1 flex flex-col items-center gap-3">
+                            <div class="w-full bg-primary/20 rounded-t-lg relative group h-full">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full bg-primary rounded-t-lg transition-all duration-500 h-[90%]">
+                                </div>
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary">
+                                    90%</div>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-tighter">Hard
+                                Skills</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center gap-3">
+                            <div class="w-full bg-primary/20 rounded-t-lg relative group h-full">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full bg-primary rounded-t-lg transition-all duration-500 h-[65%]">
+                                </div>
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary">
+                                    65%</div>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-tighter">Soft
+                                Skills</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center gap-3">
+                            <div class="w-full bg-primary/20 rounded-t-lg relative group h-full">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full bg-primary rounded-t-lg transition-all duration-500 h-[78%]">
+                                </div>
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary">
+                                    78%</div>
+                            </div>
+                            <span
+                                class="text-xs font-semibold text-slate-500 uppercase tracking-tighter">Experiencia</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center gap-3">
+                            <div class="w-full bg-primary/20 rounded-t-lg relative group h-full">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full bg-primary rounded-t-lg transition-all duration-500 h-[85%]">
+                                </div>
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary">
+                                    85%</div>
+                            </div>
+                            <span
+                                class="text-xs font-semibold text-slate-500 uppercase tracking-tighter">Educación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Missing Skills Column -->
+                <div class="space-y-10">
+                    <section>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2 bg-red-100 dark:bg-red-500/10 rounded-lg">
+                                <span class="material-symbols-outlined text-red-600 dark:text-red-400">terminal</span>
+                            </div>
+                            <h2 class="text-xl font-bold">Habilidades Técnicas Faltantes</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div
+                                class="flex items-center gap-3 p-4 bg-slate-100 dark:bg-primary/5 border border-transparent dark:hover:border-primary/30 rounded-xl transition-all">
+                                <span class="material-symbols-outlined text-primary">lock</span>
+                                <span class="text-sm font-medium">Kubernetes (K8s)</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-slate-100 dark:bg-primary/5 border border-transparent dark:hover:border-primary/30 rounded-xl transition-all">
+                                <span class="material-symbols-outlined text-primary">lock</span>
+                                <span class="text-sm font-medium">Terraform IaC</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-slate-100 dark:bg-primary/5 border border-transparent dark:hover:border-primary/30 rounded-xl transition-all">
+                                <span class="material-symbols-outlined text-primary">lock</span>
+                                <span class="text-sm font-medium">Go (Golang)</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-4 bg-slate-100 dark:bg-primary/5 border border-transparent dark:hover:border-primary/30 rounded-xl transition-all">
+                                <span class="material-symbols-outlined text-primary">lock</span>
+                                <span class="text-sm font-medium">AWS Solutions Architect</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2 bg-blue-100 dark:bg-blue-500/10 rounded-lg">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-blue-400">groups</span>
+                            </div>
+                            <h2 class="text-xl font-bold">Habilidades Blandas</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div
+                                class="p-5 bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-primary/10 rounded-xl">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-bold">Liderazgo de Equipos</span>
+                                    <span class="text-xs font-bold text-amber-500 uppercase">Parcial</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Has gestionado proyectos, pero la
+                                    vacante requiere experiencia directa supervisando equipos de 5+ personas.</p>
+                            </div>
+                            <div
+                                class="p-5 bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-primary/10 rounded-xl">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-bold">Comunicación Ejecutiva</span>
+                                    <span class="text-xs font-bold text-red-500 uppercase">Requerido</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Falta evidencia en tu CV sobre
+                                    presentaciones a stakeholders o niveles directivos (C-Level).</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Experience Gaps Column -->
+                <div class="space-y-8">
+                    <section>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2 bg-amber-100 dark:bg-amber-500/10 rounded-lg">
+                                <span
+                                    class="material-symbols-outlined text-amber-600 dark:text-amber-400">history_edu</span>
+                            </div>
+                            <h2 class="text-xl font-bold">Brechas de Experiencia</h2>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="relative pl-8 border-l-2 border-slate-200 dark:border-primary/20 pb-2">
+                                <div
+                                    class="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full border-4 border-background-light dark:border-background-dark">
+                                </div>
+                                <h4 class="text-sm font-bold text-primary mb-1 uppercase tracking-wider">Años en el Rol
+                                </h4>
+                                <div class="flex items-center gap-4">
+                                    <div class="text-2xl font-black">4 años</div>
+                                    <span class="material-symbols-outlined text-slate-400">arrow_forward</span>
+                                    <div class="text-2xl font-black text-slate-400">6+ años req.</div>
+                                </div>
+                                <p class="text-sm text-slate-500 mt-2">Te faltan aproximadamente 2 años de experiencia
+                                    senior para cumplir el perfil ideal.</p>
+                            </div>
+                            <div class="relative pl-8 border-l-2 border-slate-200 dark:border-primary/20 pb-2">
+                                <div
+                                    class="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full border-4 border-background-light dark:border-background-dark">
+                                </div>
+                                <h4 class="text-sm font-bold text-primary mb-1 uppercase tracking-wider">Industria
+                                    Específica</h4>
+                                <div
+                                    class="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/30 p-4 rounded-xl mt-3">
+                                    <p class="text-sm text-amber-800 dark:text-amber-200">
+                                        No se detectó experiencia previa en el sector <strong>FinTech</strong>. La
+                                        empresa valora conocimiento en regulaciones bancarias y seguridad financiera.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="relative pl-8 border-l-2 border-slate-200 dark:border-primary/20 pb-2">
+                                <div
+                                    class="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full border-4 border-background-light dark:border-background-dark">
+                                </div>
+                                <h4 class="text-sm font-bold text-primary mb-1 uppercase tracking-wider">Escalabilidad
+                                </h4>
+                                <p class="text-sm text-slate-500 mt-2">Has trabajado con infraestructuras medianas. La
+                                    vacante requiere gestión de sistemas con más de 1M de usuarios concurrentes.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- AI Recommendation Box -->
+                    <div class="p-6 bg-primary rounded-2xl text-white shadow-xl shadow-primary/20">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined">auto_awesome</span>
+                            <h3 class="font-bold">Consejo de ApplySmart</h3>
+                        </div>
+                        <p class="text-sm text-white/90 leading-relaxed mb-6">
+                            "Aunque te faltan 2 años de experiencia cronológica, tus proyectos en Open Source compensan
+                            gran parte de la brecha técnica. Enfócate en destacar tu conocimiento en Docker en la
+                            entrevista para mitigar la falta de Kubernetes."
+                        </p>
+                        <button
+                            class="w-full bg-white text-primary py-3 rounded-xl font-bold hover:bg-slate-50 transition-colors">
+                            Ver Plan de Preparación
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer Footer -->
+        <footer class="border-t border-slate-200 dark:border-primary/10 py-8 px-6 lg:px-20 text-center">
+            <p class="text-xs text-slate-500 dark:text-slate-500">
+                © 2024 ApplySmart AI. El análisis es generado mediante inteligencia artificial basado en la
+                interpretación de los documentos proporcionados.
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
