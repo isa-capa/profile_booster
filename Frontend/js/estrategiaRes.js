@@ -1,3 +1,5 @@
+import { authenticatedFetch } from '../config.js';
+
 const mockSummaryData = {
     companyName: "Google",
     pageSubtitle: "Estrategia de aplicación personalizada para tu perfil profesional.",
@@ -58,29 +60,87 @@ const mockSummaryData = {
         { label: "Competencia", value: "Baja", valueColor: "text-amber-500" }
     ]
 };
-document.addEventListener("DOMContentLoaded", () => {
-    // Populate Header & Hero
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const appId = urlParams.get('appId');
+
+    const subtitleElement = document.getElementById("page-subtitle");
+    const heroTitle = document.getElementById("hero-title");
+
+    if (!appId) {
+        if (subtitleElement) subtitleElement.textContent = "Vista Modo Demo (No ID)";
+        renderData(mockSummaryData);
+        return;
+    }
+
+    if (subtitleElement) subtitleElement.textContent = "Nuestra Inteligencia Artificial está analizando tu perfil y la vacante...";
+    if (heroTitle) heroTitle.textContent = "⏳ Generando tu estrategia (Esto tomará unos segundos)...";
+
+    pollResults(appId);
+});
+
+async function pollResults(appId) {
+    try {
+        const res = await authenticatedFetch(`/applications/${appId}/results`);
+        if (!res.ok) throw new Error("Network error");
+        const json = await res.json();
+
+        if (json.status === 'READY') {
+            const data = json.data;
+            const brief = data.companyBrief?.content ? JSON.parse(data.companyBrief.content) : null;
+            const cv = data.cvVersions?.[0]?.content ? JSON.parse(data.cvVersions[0].content) : null;
+
+            const liveData = {
+                companyName: data.companyName || mockSummaryData.companyName,
+                pageSubtitle: "Estrategia de aplicación personalizada para tu perfil profesional.",
+                heroBadge: "Estrategia Generada por IA",
+                heroTitle: cv?.professionalSummary ? `Enfoque: ${cv.professionalSummary.substring(0, 70)}...` : mockSummaryData.heroTitle,
+                heroDescription: brief?.companyCulture ? brief.companyCulture : mockSummaryData.heroDescription,
+                strengths: mockSummaryData.strengths,
+                nextSteps: mockSummaryData.nextSteps,
+                stats: mockSummaryData.stats
+            };
+
+            if (data.atsScore) {
+                liveData.stats[0].value = `${data.atsScore.score}/100`;
+            }
+
+            renderData(liveData);
+
+        } else if (json.status === 'FAILED') {
+            const subtitleElement = document.getElementById("page-subtitle");
+            if (subtitleElement) subtitleElement.textContent = "Ocurrió un error al generar la IA para esta aplicación.";
+            const heroTitle = document.getElementById("hero-title");
+            if (heroTitle) heroTitle.textContent = "❌ Error en Generación";
+        } else {
+            // PENDING, QUEUED, NEW
+            setTimeout(() => pollResults(appId), 3000);
+        }
+    } catch (e) {
+        console.error("Polling error", e);
+        setTimeout(() => pollResults(appId), 5000);
+    }
+}
+
+function renderData(data) {
     const companySpan = document.getElementById("company-name");
-    if (companySpan && mockSummaryData.companyName) {
-        companySpan.textContent = `- ${mockSummaryData.companyName}`;
+    if (companySpan && data.companyName) {
+        companySpan.textContent = `- ${data.companyName}`;
         companySpan.classList.remove("hidden");
     }
     const subtitleElement = document.getElementById("page-subtitle");
-    if (subtitleElement)
-        subtitleElement.textContent = mockSummaryData.pageSubtitle;
+    if (subtitleElement) subtitleElement.textContent = data.pageSubtitle;
     const heroBadge = document.getElementById("hero-badge");
-    if (heroBadge)
-        heroBadge.innerHTML = `<span class="material-symbols-outlined text-[14px] fill-1">verified</span> ${mockSummaryData.heroBadge}`;
+    if (heroBadge) heroBadge.innerHTML = `<span class="material-symbols-outlined text-[14px] fill-1">verified</span> ${data.heroBadge}`;
     const heroTitle = document.getElementById("hero-title");
-    if (heroTitle)
-        heroTitle.textContent = mockSummaryData.heroTitle;
+    if (heroTitle) heroTitle.textContent = data.heroTitle;
     const heroDescription = document.getElementById("hero-description");
-    if (heroDescription)
-        heroDescription.innerHTML = mockSummaryData.heroDescription;
-    // Populate Strengths
+    if (heroDescription) heroDescription.innerHTML = data.heroDescription;
+
     const strengthsContainer = document.getElementById("strengths-container");
-    if (strengthsContainer) {
-        strengthsContainer.innerHTML = mockSummaryData.strengths.map(strength => `
+    if (strengthsContainer && data.strengths) {
+        strengthsContainer.innerHTML = data.strengths.map(strength => `
             <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 flex items-start gap-4">
                 <div class="size-12 rounded-lg ${strength.iconBgColor} ${strength.iconTextColor} flex items-center justify-center shrink-0">
                     <span class="material-symbols-outlined">${strength.icon}</span>
@@ -92,11 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `).join("");
     }
-    // Populate Next Steps
+
     const nextStepsContainer = document.getElementById("next-steps-container");
-    if (nextStepsContainer) {
-        nextStepsContainer.innerHTML = mockSummaryData.nextSteps.map((step, index) => {
-            const isLast = index === mockSummaryData.nextSteps.length - 1;
+    if (nextStepsContainer && data.nextSteps) {
+        nextStepsContainer.innerHTML = data.nextSteps.map((step, index) => {
+            const isLast = index === data.nextSteps.length - 1;
             const badgeColor = step.isPrimary ? 'bg-primary text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-500';
             const lineColor = step.isPrimary ? 'bg-primary/30' : 'bg-slate-200 dark:bg-slate-800';
             const statusHtml = step.statusBadge ? `<span class="text-xs text-primary font-bold mt-1 inline-block">${step.statusBadge}</span>` : '';
@@ -115,22 +175,19 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }).join("");
     }
-    // Populate Quick Stats
+
     const statsContainer = document.getElementById("quick-stats-container");
-    if (statsContainer) {
-        statsContainer.innerHTML = mockSummaryData.stats.map(stat => `
+    if (statsContainer && data.stats) {
+        statsContainer.innerHTML = data.stats.map(stat => `
             <div class="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 text-center">
                 <p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">${stat.label}</p>
                 <p class="${stat.valueColor} text-3xl font-black">${stat.value}</p>
             </div>
         `).join("");
     }
-    // Setup Export Action
+
     const exportBtn = document.getElementById("btn-export-report");
     if (exportBtn) {
-        exportBtn.addEventListener("click", () => {
-            // Initiate a browser print prompt optimized for PDF saving
-            window.print();
-        });
+        exportBtn.addEventListener("click", () => window.print());
     }
-});
+}

@@ -41,12 +41,14 @@ export class ProfileController {
 
         try {
             const parsedData = await pdfParse(file.buffer);
+
             const text = parsedData.text;
             if (!text || text.trim() === '') {
                 throw new BadRequestException('Could not extract valid text from this PDF');
             }
             return this.profileService.uploadCvText(req.user.userId, text);
         } catch (e) {
+            console.error(e);
             throw new BadRequestException(`Failed to parse PDF: ${e.message}`);
         }
     }
