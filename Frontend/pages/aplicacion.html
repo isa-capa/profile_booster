@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>New Application Setup - ApplySmart AI</title>
+    <title>New Application Setup - Profile Booster</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
         rel="stylesheet">
     <link
@@ -27,11 +27,12 @@
             <div class="flex flex-col gap-6">
                 <!-- User Profile / Branding -->
                 <div class="flex gap-3 items-center px-2">
-                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 bg-gradient-to-br from-primary to-purple-800"
+                    <div id="user-avatar"
+                        class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 bg-gradient-to-br from-primary to-purple-800"
                         data-alt="Abstract gradient user avatar"></div>
                     <div class="flex flex-col">
-                        <h1 class="text-white text-base font-semibold leading-normal" style="">ApplySmart AI</h1>
-                        <p class="text-text-muted text-xs font-normal leading-normal" style="">Pro Plan</p>
+                        <h1 id="user-name" class="text-white text-base font-semibold leading-normal">...</h1>
+                        <p id="user-plan" class="text-text-muted text-xs font-normal leading-normal">...</p>
                     </div>
                 </div>
                 <!-- Navigation Links -->
@@ -47,29 +48,10 @@
                         <span class="material-symbols-outlined text-primary fill-1" style="">work</span>
                         <span class="text-sm font-medium" style="">Aplicación</span>
                     </a>
-                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-border-dark hover:text-white transition-colors group"
-                        href="#" style="">
-                        <span class="material-symbols-outlined text-text-muted group-hover:text-white"
-                            style="">description</span>
-                        <span class="text-sm font-medium" style="">Estadisticas</span>
-                    </a>
-                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-border-dark hover:text-white transition-colors group"
-                        href="#" style="">
-                        <span class="material-symbols-outlined text-text-muted group-hover:text-white"
-                            style="">groups</span>
-                        <span class="text-sm font-medium" style="">Configuración</span>
-                    </a>
                 </nav>
-            </div>
-            <!-- Bottom Settings -->
-            <div class="flex flex-col gap-2">
-                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-border-dark hover:text-white transition-colors group"
-                    href="#" style="">
-                    <span class="material-symbols-outlined text-text-muted group-hover:text-white"
-                        style="">settings</span>
-                    <span class="text-sm font-medium" style="">Configuración</span>
-                </a>
-            </div>
+                <div class="mt-auto pt-4">
+                    <p class="text-xs text-text-muted text-center">made with ❤️ by IsaDev © 2026</p>
+                </div>
         </aside>
         <!-- Main Content Area -->
         <main class="flex-1 flex flex-col h-full overflow-hidden bg-background-dark relative">
@@ -77,8 +59,10 @@
             <header
                 class="md:hidden flex items-center justify-between p-4 border-b border-border-dark bg-surface-darker">
                 <div class="flex items-center gap-2">
-                    <div class="size-8 rounded-full bg-primary"></div>
-                    <span class="font-bold text-white" style="">ApplySmart AI</span>
+                    <div class="size-8 flex items-center justify-center rounded-full overflow-hidden">
+                        <img src="../assets/logo.png" alt="Profile Booster Logo" class="w-full h-full object-cover">
+                    </div>
+                    <span class="font-bold text-white">Profile Booster</span>
                 </div>
                 <button class="text-white" style="">
                     <span class="material-symbols-outlined" style="">menu</span>
@@ -90,14 +74,12 @@
                     <!-- Page Header -->
                     <div class="flex flex-col gap-2 mb-8">
                         <div class="flex items-center gap-2 text-text-muted text-sm mb-2">
-                            <span class="" style="">Aplicaciones</span>
-                            <span class="material-symbols-outlined text-[16px]" style="">chevron_right</span>
-                            <span class="text-white" style="">Nueva Aplicación</span>
+                            <span>Aplicaciones</span>
+                            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                            <span class="text-white">Nueva Aplicación</span>
                         </div>
-                        <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight" style="">Configuración de
-                            Nueva Aplicación</h1>
-                        <p class="text-text-muted text-base max-w-2xl" style="">Paso 1: Sube tu CV y los detalles del
-                            puesto para generar una estrategia personalizada.</p>
+                        <h1 id="page-title" class="text-3xl md:text-4xl font-bold text-white tracking-tight">...</h1>
+                        <p id="page-subtitle" class="text-text-muted text-base max-w-2xl">...</p>
                     </div>
                     <!-- Two Column Layout -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-24">
@@ -130,8 +112,54 @@
                                 <label class="text-sm font-medium text-text-muted" for="cv-text" style="">O pega el
                                     texto del CV directamente</label>
                                 <textarea
-                                    class="w-full rounded-xl border border-border-dark bg-surface-dark p-4 text-base text-white placeholder-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary min-h-[300px] resize-none"
+                                    class="w-full rounded-xl border border-border-dark bg-surface-dark p-4 text-base text-white placeholder-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary min-h-[220px] resize-none"
                                     id="cv-text" placeholder="Copia y pega el contenido de tu CV aquí..."></textarea>
+                            </div>
+
+                            <!-- Additional Links (Optional) -->
+                            <div
+                                class="flex flex-col gap-4 mt-2 bg-surface-dark/30 p-5 rounded-xl border border-border-dark">
+                                <h3 class="text-sm font-semibold text-white flex items-center gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[18px]">travel_explore</span>
+                                    Enlaces Adicionales <span
+                                        class="text-text-muted text-xs font-normal">(Opcional)</span>
+                                </h3>
+                                <p class="text-xs text-text-muted mb-1">Agrega enlaces a tus perfiles para que la IA
+                                    tenga más contexto sobre tu trabajo y habilidades.</p>
+
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-xs font-medium text-text-muted">Perfil de LinkedIn</label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted material-symbols-outlined text-[18px]">link</span>
+                                        <input id="link-linkedin"
+                                            class="w-full rounded-xl border border-border-dark bg-surface-dark py-2.5 pl-10 pr-4 text-sm text-white placeholder-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                                            placeholder="https://linkedin.com/in/..." type="url">
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-xs font-medium text-text-muted">GitHub / GitLab</label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted material-symbols-outlined text-[18px]">code</span>
+                                        <input id="link-github"
+                                            class="w-full rounded-xl border border-border-dark bg-surface-dark py-2.5 pl-10 pr-4 text-sm text-white placeholder-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                                            placeholder="https://github.com/..." type="url">
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-xs font-medium text-text-muted">Portafolio / Sitio Web</label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted material-symbols-outlined text-[18px]">language</span>
+                                        <input id="link-portfolio"
+                                            class="w-full rounded-xl border border-border-dark bg-surface-dark py-2.5 pl-10 pr-4 text-sm text-white placeholder-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                                            placeholder="https://..." type="url">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Right Column: Job Details -->
@@ -204,13 +232,14 @@
                                 style="">•</span> Todos los cambios guardados</div>
                         <a href="estrategiaRes.html"
                             class="flex-1 md:flex-none flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] active:scale-[0.98] transition-all"
-                            style=""><span class="material-symbols-outlined" style="">auto_awesome</span> Generar
-                            Estrategia</a>
+                            style=""><span class="material-symbols-outlined" style="">auto_awesome</span> <span
+                                id="btn-generate-text">Generar Estrategia</span></a>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <script type="module" src="../js/aplicacion.js"></script>
 </body>
 
 </html>

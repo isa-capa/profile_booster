@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>ApplySmart AI - Resumen Ejecutivo</title>
+    <title>Profile Booster - Resumen Ejecutivo</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="../js/tailwind-config.js"></script>
     <link href="../css/global.css" rel="stylesheet" />
@@ -27,11 +27,11 @@
                 class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 py-3 lg:px-40 bg-background-light dark:bg-background-dark sticky top-0 z-50">
                 <div class="flex items-center gap-8">
                     <div class="flex items-center gap-3 text-primary">
-                        <div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
-                            <span class="material-symbols-outlined">auto_awesome</span>
+                        <div class="size-8 flex items-center justify-center rounded-lg overflow-hidden">
+                            <img src="../assets/logo.png" alt="Profile Booster Logo" class="w-full h-full object-cover">
                         </div>
                         <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
-                            ApplySmart AI</h2>
+                            Profile Booster</h2>
                     </div>
                     <div class="hidden md:flex items-center gap-6">
                         <a class="text-slate-900 dark:text-slate-100 text-sm font-medium hover:text-primary transition-colors"
@@ -42,23 +42,9 @@
                             href="#">Configuración</a>
                     </div>
                 </div>
-                <div class="flex flex-1 justify-end gap-4 items-center">
-                    <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
-                        <div
-                            class="flex w-full flex-1 items-stretch rounded-xl h-full border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900/50">
-                            <div class="text-slate-500 dark:text-slate-400 flex items-center justify-center pl-3">
-                                <span class="material-symbols-outlined text-[20px]">search</span>
-                            </div>
-                            <input
-                                class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm placeholder:text-slate-500"
-                                placeholder="Buscar..." value="" />
-                        </div>
-                    </label>
-                    <button
-                        class="size-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                        <span class="material-symbols-outlined">notifications</span>
-                    </button>
-                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50"
+                <div class="flex flex-1 justify-end gap-6 items-center">
+                    <div id="user-avatar"
+                        class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50"
                         data-alt="User profile avatar showing a professional man"
                         style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4gD-d_TviHSXisQ4zcZzDfT5SY0EHjYe47PcGg2WLZ72qMNMpex0aXFrjyiQ4-FLRC1xTvv4sC_cIhLm7B7zMK_hDnRU9TFQ7J81-EyCELPc6t1qz8pEDokucWfdwJG-JPqqWstm7vBDkJpFt1f3tPRLNvypzmiQUeTM0pbMeIwUheRXTtZnYgGYvvrf0UCigonz90EZ_MjMbTuEYNrS1y-FJfdMDYt6H2nfSWfMQDU5_fNBlmQfrPAXwyzNOHLJdUaMI4hu64O-V");'>
                     </div>
@@ -68,22 +54,23 @@
             <main class="flex flex-1 justify-center py-6 px-4 lg:px-40">
                 <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
                     <!-- Secondary Navigation Tabs -->
-                    <div class="mb-8 overflow-x-auto">
-                        <div class="flex border-b border-slate-200 dark:border-slate-800 gap-8 min-w-max">
-                            <a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2 px-1"
+                    <div class="mt-4 px-6 lg:px-40 w-full overflow-x-auto">
+                        <div
+                            class="flex border-b border-slate-200 dark:border-slate-800 gap-8 min-w-max max-w-[1200px] mx-auto">
+                            <a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2 px-1 transition-all"
                                 href="estrategiaRes.html">
                                 <p class="text-sm font-bold leading-normal tracking-wide">Resumen</p>
                             </a>
                             <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 pt-2 px-1 transition-all"
                                 href="estrategiaAnali.html">
-                                <p class="text-sm font-bold leading-normal tracking-wide">Análisis de Brechas</p>
+                                <p class="text-sm font-bold leading-normal tracking-wide">Análisis de Oportunidad</p>
                             </a>
                             <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 pt-2 px-1 transition-all"
                                 href="estrategia.html">
                                 <p class="text-sm font-bold leading-normal tracking-wide">Plan de Preparación</p>
                             </a>
                             <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 pt-2 px-1 transition-all"
-                                href="estartegiaRecu.html">
+                                href="estrategiaRecu.html">
                                 <p class="text-sm font-bold leading-normal tracking-wide">Recursos</p>
                             </a>
                         </div>
@@ -92,11 +79,11 @@
                     <div class="flex flex-wrap justify-between items-end gap-4 mb-8">
                         <div class="flex flex-col gap-2">
                             <h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight">
-                                Resumen Ejecutivo</h1>
-                            <p class="text-slate-600 dark:text-slate-400 text-lg font-normal">Estrategia de aplicación
-                                personalizada para tu perfil profesional.</p>
+                                Resumen Ejecutivo <span id="company-name" class="text-primary font-bold hidden">-
+                                </span></h1>
+                            <p id="page-subtitle" class="text-slate-600 dark:text-slate-400 text-lg font-normal">...</p>
                         </div>
-                        <button
+                        <button id="btn-export-report"
                             class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl font-semibold flex items-center gap-2 transition-all shadow-lg shadow-primary/20">
                             <span class="material-symbols-outlined text-[20px]">download</span>
                             Exportar Reporte
@@ -111,21 +98,15 @@
                                 style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGYfb-bGgCszXrQcmBMEn-bvGHd1vmlzPgfVMzev79gIWbki331umHW7Cs8kYAVaWe2eBAoOkl-7mqIBSJ9VBaaAcFOK11qtTC2qoc85X5Ew8ri-qgWjOoAMaGbrE05CZQjcICzji34_7K01oA4KcGT9YIeWUBKE5gfDvOkjh9XO5OT-81HJq1Ej3rp6PkITLAION1hv4Xdc0Rq-LRXWDj-gRBEfr-a7OAhI9Boy8QSvnmVDaDFSLQfKFsCppfq8y0AjoAYnlFnLnc");'>
                             </div>
                             <div class="flex-1 p-8 flex flex-col justify-center">
-                                <div
+                                <div id="hero-badge"
                                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 w-fit">
                                     <span class="material-symbols-outlined text-[14px] fill-1">verified</span>
-                                    Estrategia Recomendada
+                                    ...
                                 </div>
-                                <h3 class="text-slate-900 dark:text-white text-2xl font-bold mb-4">Enfoque: Liderazgo
-                                    Técnico en IA Escalable</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
-                                    Tu perfil destaca por una sólida base técnica en Inteligencia Artificial y una
-                                    trayectoria probada en arquitecturas distribuidas.
-                                    Nuestra IA sugiere centrar tu narrativa en la <strong>escalabilidad y la eficiencia
-                                        operativa</strong>. El mercado europeo actual
-                                    demanda roles Senior que no solo entiendan los modelos, sino que sepan integrarlos
-                                    en productos de alta demanda.
-                                </p>
+                                <h3 id="hero-title" class="text-slate-900 dark:text-white text-2xl font-bold mb-4">...
+                                </h3>
+                                <p id="hero-description"
+                                    class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">...</p>
                                 <div class="flex gap-4">
                                     <button
                                         class="bg-primary text-white px-6 py-2 rounded-xl text-sm font-bold hover:brightness-110 transition-all">Ver
@@ -142,49 +123,8 @@
                         <!-- Key Strengths -->
                         <div class="flex flex-col gap-4">
                             <h2 class="text-slate-900 dark:text-white text-xl font-bold px-1">Fortalezas Clave</h2>
-                            <div class="grid gap-4">
-                                <!-- Strength Item 1 -->
-                                <div
-                                    class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 flex items-start gap-4">
-                                    <div
-                                        class="size-12 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
-                                        <span class="material-symbols-outlined">psychology</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Deep Learning Avanzado
-                                        </h4>
-                                        <p class="text-slate-600 dark:text-slate-400 text-sm">Experiencia demostrable en
-                                            optimización de transformers y despliegue en edge computing.</p>
-                                    </div>
-                                </div>
-                                <!-- Strength Item 2 -->
-                                <div
-                                    class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 flex items-start gap-4">
-                                    <div
-                                        class="size-12 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0">
-                                        <span class="material-symbols-outlined">groups</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Mentoria y Liderazgo
-                                        </h4>
-                                        <p class="text-slate-600 dark:text-slate-400 text-sm">Historial gestionando
-                                            equipos ágiles de +5 desarrolladores con altos índices de entrega.</p>
-                                    </div>
-                                </div>
-                                <!-- Strength Item 3 -->
-                                <div
-                                    class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 flex items-start gap-4">
-                                    <div
-                                        class="size-12 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
-                                        <span class="material-symbols-outlined">language</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Dominio de Inglés (C2)
-                                        </h4>
-                                        <p class="text-slate-600 dark:text-slate-400 text-sm">Capacidad para negociar y
-                                            liderar presentaciones técnicas ante stakeholders internacionales.</p>
-                                    </div>
-                                </div>
+                            <div id="strengths-container" class="grid gap-4">
+                                <!-- Dynamic content injected via TS -->
                             </div>
                         </div>
                         <!-- Roadmap / Next Steps -->
@@ -193,47 +133,8 @@
                             <div
                                 class="p-6 rounded-xl border border-primary/20 bg-primary/5 dark:bg-primary/10 relative overflow-hidden">
                                 <div class="relative z-10 flex flex-col gap-6">
-                                    <div class="flex gap-4">
-                                        <div class="flex flex-col items-center">
-                                            <div
-                                                class="size-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
-                                                1</div>
-                                            <div class="w-0.5 grow bg-primary/30 my-1"></div>
-                                        </div>
-                                        <div class="pb-4">
-                                            <h4 class="text-slate-900 dark:text-white font-bold">Optimizar LinkedIn</h4>
-                                            <p class="text-slate-600 dark:text-slate-400 text-sm">Ajustar palabras clave
-                                                para algoritmos de reclutamiento de empresas FAANG.</p>
-                                            <span class="text-xs text-primary font-bold mt-1 inline-block">Pendiente -
-                                                15 min</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-4">
-                                        <div class="flex flex-col items-center">
-                                            <div
-                                                class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center text-sm font-bold">
-                                                2</div>
-                                            <div class="w-0.5 grow bg-slate-200 dark:bg-slate-800 my-1"></div>
-                                        </div>
-                                        <div class="pb-4">
-                                            <h4 class="text-slate-900 dark:text-white font-bold">Preparar Caso de
-                                                Estudio</h4>
-                                            <p class="text-slate-600 dark:text-slate-400 text-sm">Documentar el proyecto
-                                                de IA generativa de 2023 usando el método STAR.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-4">
-                                        <div class="flex flex-col items-center">
-                                            <div
-                                                class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center text-sm font-bold">
-                                                3</div>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-slate-900 dark:text-white font-bold">Simulación de
-                                                Entrevista</h4>
-                                            <p class="text-slate-600 dark:text-slate-400 text-sm">Realizar primer mock
-                                                interview con el agente de IA especializado en cultura europea.</p>
-                                        </div>
+                                    <div id="next-steps-container" class="flex flex-col gap-6">
+                                        <!-- Dynamic content injected via TS -->
                                     </div>
                                     <button
                                         class="w-full py-3 bg-white dark:bg-slate-900 text-primary border border-primary/20 font-bold rounded-xl hover:bg-primary/5 transition-colors">
@@ -247,45 +148,18 @@
                         </div>
                     </div>
                     <!-- Quick Stats Row -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        <div
-                            class="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 text-center">
-                            <p
-                                class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">
-                                Perfil AI Score</p>
-                            <p class="text-primary text-3xl font-black">92/100</p>
-                        </div>
-                        <div
-                            class="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 text-center">
-                            <p
-                                class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">
-                                Gap Técnico</p>
-                            <p class="text-emerald-500 text-3xl font-black">-4%</p>
-                        </div>
-                        <div
-                            class="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 text-center">
-                            <p
-                                class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">
-                                Días para Meta</p>
-                            <p class="text-slate-900 dark:text-white text-3xl font-black">18</p>
-                        </div>
-                        <div
-                            class="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 text-center">
-                            <p
-                                class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">
-                                Competencia</p>
-                            <p class="text-amber-500 text-3xl font-black">Baja</p>
-                        </div>
+                    <div id="quick-stats-container" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                        <!-- Dynamic stats go here -->
                     </div>
                 </div>
             </main>
             <!-- Footer -->
             <footer
                 class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-slate-500 dark:text-slate-400 text-sm">
-                <p>© 2024 ApplySmart AI. Potenciado por Inteligencia Artificial para tu éxito profesional.</p>
+                <p>made with ❤️ by IsaDev © 2026</p>
             </footer>
         </div>
-    </div>
+        <script type="module" src="../js/estrategiaRes.js"></script>
 </body>
 
 </html>

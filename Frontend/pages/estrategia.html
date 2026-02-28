@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>ApplySmart AI - ATS Optimized CV</title>
+    <title>Profile Booster - ATS Optimized CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
         rel="stylesheet" />
     <link
@@ -21,64 +21,57 @@
 
 <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased min-h-screen flex flex-col">
-    <!-- Top Navigation -->
+    <!-- Navigation Bar -->
     <header
-        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-10 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
-        <div class="flex items-center gap-4">
-            <div class="size-8 text-primary flex items-center justify-center">
-                <span class="material-symbols-outlined text-3xl">smart_toy</span>
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 py-3 lg:px-40 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3 text-primary">
+                <div class="size-8 flex items-center justify-center rounded-lg overflow-hidden">
+                    <img src="../assets/logo.png" alt="Profile Booster Logo" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                    Profile Booster</h2>
             </div>
-            <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">ApplySmart AI
-            </h2>
-        </div>
-        <div class="flex flex-1 justify-end gap-8 items-center">
-            <nav class="hidden md:flex items-center gap-9">
-                <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
+            <div class="hidden md:flex items-center gap-6">
+                <a class="text-slate-900 dark:text-slate-100 text-sm font-medium hover:text-primary transition-colors"
                     href="Dashboard.html">Dashboard</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
-                    href="#">History</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
-                    href="#">Settings</a>
-            </nav>
-            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-slate-200 dark:border-slate-700"
-                data-alt="User profile picture"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCCODqgVfKgm_b4tmUpoPCa2KwDOZLArd91x_YSQFDG2TBu6gBFSwGrhwJ_9986V8aooVGvjadDM9JW2fA_b1CytLJfrm0PRxZdPRFXH_VZ5O0sENFY8-SkLtPN76_J7_dX5Ve78aYoXTRZZu5BgV7nS0_9yHSk9QpW2M9tLXnk2R0gfQV6RindHxKwfH6z-wsO77CC8knEUZs6_TkEVZ6PvfK5v1g7AmkacS4ZKgPYto4gPDVV3NewRt8iH8288DE1Afdn7KbcNeQ");'>
+                <a class="text-slate-900 dark:text-slate-100 text-sm font-medium hover:text-primary transition-colors"
+                    href="aplicacion.html">Aplicaciones</a>
+                <a class="text-slate-900 dark:text-slate-100 text-sm font-medium hover:text-primary transition-colors"
+                    href="#">Configuración</a>
+            </div>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+            <div id="user-avatar"
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50"
+                data-alt="User profile avatar showing a professional man"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4gD-d_TviHSXisQ4zcZzDfT5SY0EHjYe47PcGg2WLZ72qMNMpex0aXFrjyiQ4-FLRC1xTvv4sC_cIhLm7B7zMK_hDnRU9TFQ7J81-EyCELPc6t1qz8pEDokucWfdwJG-JPqqWstm7vBDkJpFt1f3tPRLNvypzmiQUeTM0pbMeIwUheRXTtZnYgGYvvrf0UCigonz90EZ_MjMbTuEYNrS1y-FJfdMDYt6H2nfSWfMQDU5_fNBlmQfrPAXwyzNOHLJdUaMI4hu64O-V");'>
             </div>
         </div>
     </header>
-    <main class="flex-1 flex flex-col max-w-[1440px] mx-auto w-full px-6 lg:px-10 py-6">
-        <!-- Tab Navigation -->
-        <div class="mb-8">
-            <div class="flex border-b border-slate-200 dark:border-slate-700 gap-8 overflow-x-auto">
-                <a class="group flex flex-col items-center justify-center border-b-[3px] border-primary pb-3 pt-2 px-1"
-                    href="estrategia.html">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary text-xl">description</span>
-                        <p class="text-primary text-sm font-bold leading-normal">CV Optimizado</p>
-                    </div>
-                </a>
-                <a class="group flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-slate-300 dark:hover:border-slate-600 pb-3 pt-2 px-1 transition-colors"
-                    href="analisisDeEm.html">
-                    <div class="flex items-center gap-2">
-                        <span
-                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-xl group-hover:text-slate-700 dark:group-hover:text-slate-300">domain</span>
-                        <p
-                            class="text-slate-500 dark:text-slate-400 text-sm font-bold leading-normal group-hover:text-slate-700 dark:group-hover:text-slate-300">
-                            Análisis de Empresa</p>
-                    </div>
-                </a>
-                <a class="group flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-slate-300 dark:hover:border-slate-600 pb-3 pt-2 px-1 transition-colors"
-                    href="estrategiaRes.html">
-                    <div class="flex items-center gap-2">
-                        <span
-                            class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-xl group-hover:text-slate-700 dark:group-hover:text-slate-300">school</span>
-                        <p
-                            class="text-slate-500 dark:text-slate-400 text-sm font-bold leading-normal group-hover:text-slate-700 dark:group-hover:text-slate-300">
-                            Plan de Preparación</p>
-                    </div>
-                </a>
-            </div>
+
+    <!-- Secondary Navigation Tabs -->
+    <div class="mt-4 px-6 lg:px-40 w-full overflow-x-auto">
+        <div class="flex border-b border-slate-200 dark:border-slate-800 gap-8 min-w-max max-w-[1200px] mx-auto">
+            <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 pt-2 px-1 transition-all"
+                href="estrategiaRes.html">
+                <p class="text-sm font-bold leading-normal tracking-wide">Resumen</p>
+            </a>
+            <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 pt-2 px-1 transition-all"
+                href="estrategiaAnali.html">
+                <p class="text-sm font-bold leading-normal tracking-wide">Análisis de Oportunidad</p>
+            </a>
+            <a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2 px-1 transition-all"
+                href="estrategia.html">
+                <p class="text-sm font-bold leading-normal tracking-wide">Plan de Preparación</p>
+            </a>
+            <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-3 pt-2 px-1 transition-all"
+                href="estrategiaRecu.html">
+                <p class="text-sm font-bold leading-normal tracking-wide">Recursos</p>
+            </a>
         </div>
+    </div>
+    <main class="flex-1 flex flex-col max-w-[1440px] mx-auto w-full px-6 lg:px-10 py-6">
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Main Content: CV Preview -->
             <div class="flex-1 min-w-0">
@@ -108,97 +101,70 @@
                             </button>
                         </div>
                     </div>
-                    <div class="p-8 md:p-12 font-serif bg-white dark:bg-[#1E192B] min-h-[800px]">
-                        <!-- CV Header -->
-                        <div class="border-b-2 border-slate-900 dark:border-slate-200 pb-6 mb-6">
-                            <h2
-                                class="text-3xl font-bold text-slate-900 dark:text-white mb-2 text-center uppercase tracking-wide">
-                                Juan Pérez</h2>
-                            <p class="text-center text-slate-600 dark:text-slate-300 text-sm">
-                                Madrid, España • +34 600 000 000 • juan.perez@email.com • linkedin.com/in/juanperez
-                            </p>
-                        </div>
-                        <!-- Professional Profile -->
-                        <div class="mb-8">
-                            <h3
-                                class="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-300 dark:border-slate-600 mb-3 pb-1 uppercase">
-                                Perfil Profesional</h3>
-                            <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed text-justify">
-                                <span
-                                    class="bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-light px-0.5 rounded">Senior
-                                    Product Manager</span> orientado a resultados con más de 7 años de experiencia
-                                liderando equipos ágiles multidisciplinarios en el sector <span
-                                    class="bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-light px-0.5 rounded">SaaS
-                                    B2B</span>. Experto en alinear la visión del producto con los objetivos estratégicos
-                                de la empresa. Historial comprobado de aumentar la retención de usuarios en un 25% y
-                                reducir el tiempo de comercialización mediante la implementación de metodologías <span
-                                    class="bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-light px-0.5 rounded">Scrum</span>
-                                y <span
-                                    class="bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-light px-0.5 rounded">Kanban</span>.
-                            </p>
-                        </div>
-                        <!-- Skills -->
-                        <div class="mb-8">
-                            <h3
-                                class="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-300 dark:border-slate-600 mb-3 pb-1 uppercase">
-                                Habilidades Técnicas</h3>
-                            <div
-                                class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-sm text-slate-700 dark:text-slate-300">
-                                <div class="flex gap-2"><span
-                                        class="font-semibold text-slate-900 dark:text-white">Gestión:</span> Agile,
-                                    Scrum, Kanban, Jira, Confluence</div>
-                                <div class="flex gap-2"><span
-                                        class="font-semibold text-slate-900 dark:text-white">Análisis:</span> SQL,
-                                    Google Analytics, Tableau, Mixpanel</div>
-                                <div class="flex gap-2"><span
-                                        class="font-semibold text-slate-900 dark:text-white">Estrategia:</span>
-                                    Roadmapping, Go-to-Market, UX Research</div>
-                                <div class="flex gap-2"><span
-                                        class="font-semibold text-slate-900 dark:text-white">Idiomas:</span> Español
-                                    (Nativo), Inglés (C1)</div>
+                    <div
+                        class="p-8 md:p-12 bg-[#e2e8f0] dark:bg-neutral-dark min-h-[800px] flex items-center justify-center">
+                        <!-- CV Document Layout based on Image -->
+                        <div class="w-full max-w-[850px] bg-white p-10 font-[Inter] text-black shadow-lg">
+                            <!-- Header -->
+                            <div class="text-center mb-6">
+                                <h2 id="cv-name" class="text-2xl font-bold mb-1">...</h2>
+                                <h3 id="cv-role" class="text-lg font-bold mb-1">...</h3>
+                                <p id="cv-contact" class="text-sm mb-1">...</p>
+                                <p id="cv-links" class="text-sm">...</p>
                             </div>
-                        </div>
-                        <!-- Experience -->
-                        <div class="mb-8">
-                            <h3
-                                class="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-300 dark:border-slate-600 mb-4 pb-1 uppercase">
-                                Experiencia Laboral</h3>
-                            <div class="mb-6">
-                                <div class="flex justify-between items-baseline mb-1">
-                                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Senior Product
-                                        Manager</h4>
-                                    <span class="text-slate-600 dark:text-slate-400 text-sm font-medium">Ene 2021 -
-                                        Presente</span>
-                                </div>
-                                <div class="text-slate-800 dark:text-slate-200 text-sm font-semibold mb-2">TechSolutions
-                                    Inc., Madrid</div>
-                                <ul
-                                    class="list-disc list-outside ml-4 text-slate-700 dark:text-slate-300 text-sm space-y-1">
-                                    <li>Lideró el ciclo de vida completo de 3 productos <span
-                                            class="bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-light px-0.5 rounded">SaaS</span>
-                                        principales, generando $2M en ingresos anuales recurrentes (ARR).</li>
-                                    <li>Implementó procesos de descubrimiento continuo de productos, realizando más de
-                                        50 entrevistas a clientes por trimestre.</li>
-                                    <li>Colaboró estrechamente con ingeniería y diseño para reducir la deuda técnica en
-                                        un 15% mediante sprints dedicados.</li>
-                                </ul>
+
+                            <!-- Profile -->
+                            <div class="mb-5">
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Perfil
+                                    Profesional</h4>
+                                <p id="cv-profile" class="text-xs text-justify leading-relaxed">...</p>
                             </div>
-                            <div class="mb-6">
-                                <div class="flex justify-between items-baseline mb-1">
-                                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Product Manager</h4>
-                                    <span class="text-slate-600 dark:text-slate-400 text-sm font-medium">Jun 2018 - Dic
-                                        2020</span>
-                                </div>
-                                <div class="text-slate-800 dark:text-slate-200 text-sm font-semibold mb-2">Innovate Web
-                                    S.L., Barcelona</div>
-                                <ul
-                                    class="list-disc list-outside ml-4 text-slate-700 dark:text-slate-300 text-sm space-y-1">
-                                    <li>Gestionó el roadmap del producto para la plataforma de comercio electrónico,
-                                        aumentando la tasa de conversión en un 10%.</li>
-                                    <li>Definió y priorizó el backlog utilizando datos cuantitativos de <span
-                                            class="bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-light px-0.5 rounded">Google
-                                            Analytics</span> y SQL.</li>
-                                </ul>
+
+                            <!-- Technical Skills -->
+                            <div class="mb-5">
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Habilidades
+                                    Técnicas</h4>
+                                <p id="cv-tech-skills" class="text-xs text-center">...</p>
+                            </div>
+
+                            <!-- Soft Skills -->
+                            <div class="mb-5">
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Habilidades
+                                    Blandas</h4>
+                                <p id="cv-soft-skills" class="text-xs text-center">...</p>
+                            </div>
+
+                            <!-- Academic Projects -->
+                            <div class="mb-5">
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Proyecto
+                                    Académico</h4>
+                                <ul id="cv-projects" class="list-disc list-inside text-xs space-y-1.5 ml-2"></ul>
+                            </div>
+
+                            <!-- Experience -->
+                            <div class="mb-5">
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Experiencia
+                                    Laboral</h4>
+                                <div id="cv-experience" class="space-y-4"></div>
+                            </div>
+
+                            <!-- Education -->
+                            <div class="mb-5">
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Formación
+                                    Educativa</h4>
+                                <ul id="cv-education" class="list-disc list-inside text-xs space-y-1.5 ml-2"></ul>
+                            </div>
+
+                            <!-- Courses -->
+                            <div class="mb-5">
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Cursos</h4>
+                                <ul id="cv-courses" class="list-disc list-inside text-xs space-y-1.5 ml-2"></ul>
+                            </div>
+
+                            <!-- Languages -->
+                            <div>
+                                <h4 class="text-sm font-bold uppercase border-b-2 border-black pb-1 mb-2">Idiomas</h4>
+                                <ul id="cv-languages" class="list-disc list-inside text-xs space-y-1.5 ml-2"></ul>
                             </div>
                         </div>
                     </div>
@@ -215,13 +181,15 @@
                     <h3 class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
                         Puntuación de Coincidencia ATS</h3>
                     <div class="flex items-end gap-3 mb-2">
-                        <span class="text-5xl font-bold text-slate-900 dark:text-white tracking-tighter">87%</span>
-                        <span class="text-green-500 font-medium mb-1.5 flex items-center text-sm">
-                            <span class="material-symbols-outlined text-base">trending_up</span> +12%
+                        <span id="match-score-text"
+                            class="text-5xl font-bold text-slate-900 dark:text-white tracking-tighter">...</span>
+                        <span id="match-score-trend"
+                            class="text-green-500 font-medium mb-1.5 flex items-center text-sm">
+                            <span class="material-symbols-outlined text-base">trending_up</span> ...
                         </span>
                     </div>
                     <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden mb-4">
-                        <div class="bg-primary h-full rounded-full" style="width: 87%"></div>
+                        <div id="match-score-bar" class="bg-primary h-full rounded-full" style="width: 0%"></div>
                     </div>
                     <p class="text-slate-600 dark:text-slate-400 text-sm">
                         ¡Excelente! Tu CV tiene una alta probabilidad de pasar los filtros automáticos para este puesto.
@@ -235,38 +203,22 @@
                     </h3>
                     <div class="mb-5">
                         <div class="flex justify-between items-center mb-2">
-                            <span class="text-xs font-semibold text-green-600 dark:text-green-400 uppercase">Detectadas
-                                (12)</span>
+                            <span id="detected-count-text"
+                                class="text-xs font-semibold text-green-600 dark:text-green-400 uppercase">Detectadas
+                                (0)</span>
                             <span class="material-symbols-outlined text-green-500 text-sm">check</span>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-2.5 py-1 bg-green-500/10 text-green-700 dark:text-green-300 text-xs font-medium rounded border border-green-500/20">SaaS</span>
-                            <span
-                                class="px-2.5 py-1 bg-green-500/10 text-green-700 dark:text-green-300 text-xs font-medium rounded border border-green-500/20">Agile</span>
-                            <span
-                                class="px-2.5 py-1 bg-green-500/10 text-green-700 dark:text-green-300 text-xs font-medium rounded border border-green-500/20">Product
-                                Management</span>
-                            <span
-                                class="px-2.5 py-1 bg-green-500/10 text-green-700 dark:text-green-300 text-xs font-medium rounded border border-green-500/20">SQL</span>
-                            <span
-                                class="px-2.5 py-1 bg-green-500/10 text-green-700 dark:text-green-300 text-xs font-medium rounded border border-green-500/20">Jira</span>
+                        <div id="detected-keywords-container" class="flex flex-wrap gap-2">
                         </div>
                     </div>
                     <div>
                         <div class="flex justify-between items-center mb-2">
-                            <span class="text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase">Faltantes
-                                (3)</span>
+                            <span id="missing-count-text"
+                                class="text-xs font-semibold text-orange-600 dark:text-orange-400 uppercase">Faltantes
+                                (0)</span>
                             <span class="material-symbols-outlined text-orange-500 text-sm">warning</span>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-2.5 py-1 bg-orange-500/10 text-orange-700 dark:text-orange-300 text-xs font-medium rounded border border-orange-500/20 dashed border-dashed">Python</span>
-                            <span
-                                class="px-2.5 py-1 bg-orange-500/10 text-orange-700 dark:text-orange-300 text-xs font-medium rounded border border-orange-500/20 dashed border-dashed">API
-                                Rest</span>
-                            <span
-                                class="px-2.5 py-1 bg-orange-500/10 text-orange-700 dark:text-orange-300 text-xs font-medium rounded border border-orange-500/20 dashed border-dashed">B2C</span>
+                        <div id="missing-keywords-container" class="flex flex-wrap gap-2">
                         </div>
                         <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 italic">
                             *Sugerencia: Intenta incluir estas habilidades en la sección de "Experiencia" o "Proyectos".
@@ -278,7 +230,10 @@
                     class="bg-white dark:bg-[#1E192B] p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-3">
                     <button
                         class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg shadow-primary/20"><span
-                            class="material-symbols-outlined">download</span> Descargar PDF Optimizado</button>
+                            class="material-symbols-outlined">download</span> Descargar PDF (Español)</button>
+                    <button
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg shadow-blue-600/20"><span
+                            class="material-symbols-outlined">download</span> Descargar PDF (Inglés)</button>
                     <button
                         class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors border border-slate-200 dark:border-slate-600"><span
                             class="material-symbols-outlined">content_copy</span> Copiar Versión de Texto</button>
@@ -290,6 +245,11 @@
             </div>
         </div>
     </main>
+    <footer
+        class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-slate-500 dark:text-slate-400 text-sm">
+        <p>made with ❤️ by IsaDev © 2026</p>
+    </footer>
+    <script type="module" src="../js/estrategia.js"></script>
 </body>
 
 </html>
